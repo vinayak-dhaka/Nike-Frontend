@@ -1,0 +1,58 @@
+export const DEFAULT_ITEMS = [
+  {
+    id: "001",
+    image: "/Nike_New_1.jpg", // ✅ direct in public
+    company: "Nike",
+    item_name: "Nike Air Zoom Pegasus 40",
+    description: "Lightweight running shoes built for daily training.",
+    price: 8999,
+  },
+  {
+    id: "002",
+    image: "/Nike_New_2.webp",
+    company: "Nike",
+    item_name: "Nike Revolution 6",
+    description: "Breathable mesh design with soft midsole cushioning.",
+    price: 4999,
+  },
+  {
+    id: "003",
+    image: "/Nike_New_3.jpeg",
+    company: "Nike",
+    item_name: "Nike Air Max Alpha Trainer",
+    description: "Durable shoes designed for gym and heavy workouts.",
+    price: 7499,
+  },
+  {
+    id: "004",
+    image: "/Nike_New_4.jpg",
+    company: "Nike",
+    item_name: "Nike Downshifter 12",
+    description: "Everyday comfort with lightweight support.",
+    price: 4299,
+  },
+  {
+    id: "005",
+    image: "/Nike_New_5.jpg",
+    company: "Nike",
+    item_name: "Nike React Infinity Run 3",
+    description: "Maximum cushioning with smooth transitions.",
+    price: 11999,
+  },
+  {
+    id: "006",
+    image: "/Nike_New_6.jpg",
+    company: "Nike",
+    item_name: "Nike ZoomX Vaporfly Next%",
+    description: "Elite racing shoes with carbon-fiber plate.",
+    price: 18999,
+  },
+  {
+    id: "007",
+    image: "/Nike_New_7.png",
+    company: "Nike",
+    item_name: "Nike Court Vision Low",
+    description: "Retro basketball-inspired casual sneakers.",
+    price: 5999,
+  },
+];
