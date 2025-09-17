@@ -12,11 +12,25 @@ const Bag = () => {
   return (
     <>
       <main>
-        <div className="bag-page">
+        <div className="bag-page " style={{ marginBottom: "200px" }}>
           <div className="bag-items-container">
-            {finalitem.map((item) => (
-              <BagItemContainer item={item} />
-            ))}
+            {finalitem.length == 0 ? (
+              <p
+                style={{
+                  fontSize: "37px",
+                  fontFamily: "sans-serif",
+                  fontWeight: "bold",
+                  alignContent: "center",
+                  alignItems: "center",
+                  marginLeft: "140px",
+                  marginTop: "100px",
+                }}
+              >
+                Bag is Empty 🫩{" "}
+              </p>
+            ) : (
+              finalitem.map((item) => <BagItemContainer item={item} />)
+            )}
           </div>
 
           <BagSummary />

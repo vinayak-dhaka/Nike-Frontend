@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import FetchData from "./components/FetchData";
 import { useSelector } from "react-redux";
 import LoadingSpinner from "./components/Loader";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const fetchstatus = useSelector((store) => store.fetchstatus);
@@ -17,6 +19,7 @@ function App() {
       {fetchstatus.fetchingdone ? <Outlet /> : <LoadingSpinner />}
 
       <Footer />
+      <ToastContainer position="top-center" autoClose={2000} />
     </>
   );
 }

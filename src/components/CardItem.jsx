@@ -2,6 +2,8 @@ import { IoIosAddCircle } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { bagActions } from "../store/bagSlice";
 import { MdDelete } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const CardItem = ({ title, text, image, id }) => {
   const bagitems = useSelector((store) => store.bag);
   const elementfound = bagitems.indexOf(id) >= 0;
@@ -9,9 +11,17 @@ const CardItem = ({ title, text, image, id }) => {
   const dispatch = useDispatch();
   const handleaddtocart = () => {
     dispatch(bagActions.addToBag(id));
+    toast.success("Added to Bag  🛒", {
+      position: "top-center",
+      autoClose: 500,
+    });
   };
   const handleremovefromcart = () => {
     dispatch(bagActions.removeFromBag(id));
+    toast.error("Removed from Bag  🛒 ", {
+      position: "top-center",
+      autoClose: 500,
+    });
   };
   return (
     <>
@@ -46,14 +56,14 @@ const CardItem = ({ title, text, image, id }) => {
               <MdDelete /> Remove
             </button>
           ) : (
-            <a
+            <button
               href="#"
               class="btn btn-primary"
               style={{ width: "18rem" }}
               onClick={handleaddtocart}
             >
               <IoIosAddCircle /> Add to Bag
-            </a>
+            </button>
           )}
         </div>
       </div>

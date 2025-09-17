@@ -1,153 +1,110 @@
+import { Link } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6";
+import { MdOutlineSupportAgent } from "react-icons/md";
+import { BiSolidPurchaseTag } from "react-icons/bi";
+import { MdGroups } from "react-icons/md";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Footer = () => {
+  const [feedback, setFeedback] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!feedback) return;
+    toast.success("Thank you for your feedback! ");
+
+    setFeedback("");
+  };
   return (
-    <>
-      <footer class="py-5">
-        {" "}
-        <div class="row">
-          {" "}
-          <div class="col-6 col-md-2 mb-3">
-            {" "}
-            <h5>Section</h5>{" "}
-            <ul class="nav flex-column">
-              {" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Home
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Features
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Pricing
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  FAQs
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  About
-                </a>
-              </li>{" "}
-            </ul>{" "}
-          </div>{" "}
-          <div class="col-6 col-md-2 mb-3">
-            {" "}
-            <h5>Section</h5>{" "}
-            <ul class="nav flex-column">
-              {" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Home
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Features
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Pricing
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  FAQs
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  About
-                </a>
-              </li>{" "}
-            </ul>{" "}
-          </div>{" "}
-          <div class="col-6 col-md-2 mb-3">
-            {" "}
-            <h5>Section</h5>{" "}
-            <ul class="nav flex-column">
-              {" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Home
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Features
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  Pricing
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  FAQs
-                </a>
-              </li>{" "}
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">
-                  About
-                </a>
-              </li>{" "}
-            </ul>{" "}
-          </div>{" "}
-          <div class="col-md-5 offset-md-1 mb-3">
-            {" "}
-            <form>
-              {" "}
-              <h5>Subscribe to our newsletter</h5>{" "}
-              <p>Monthly digest of what's new and exciting from us.</p>{" "}
-              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                {" "}
-                <label for="newsletter1" class="visually-hidden">
-                  Email address
-                </label>{" "}
-                <input
-                  id="newsletter1"
-                  type="email"
-                  class="form-control"
-                  placeholder="Email address"
-                />{" "}
-                <button class="btn btn-primary" type="button">
-                  Subscribe
-                </button>{" "}
-              </div>{" "}
-            </form>{" "}
-          </div>{" "}
-        </div>{" "}
-        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-          {" "}
-          <p>© 2025 Company, Inc. All rights reserved.</p>{" "}
-          <ul class="list-unstyled d-flex">
-            {" "}
-            <li class="ms-3">
-              <a class="link-body-emphasis" href="#" aria-label="Instagram">
-                <svg class="bi" width="24" height="24">
-                  <use xlink:href="#instagram"></use>
-                </svg>
+    <footer className="py-5">
+      <div className="row row-cols-1 row-cols-md-2">
+        {/* Column 1 */}
+        <div className="col mb-3">
+          <h5>Section</h5>
+          <ul className="nav flex-column">
+            <li className="nav-item mb-2">
+              <Link to={"/"} className="nav-link p-0 text-body-secondary">
+                <FaHome /> Home
+              </Link>
+            </li>
+            <li className="nav-item mb-2">
+              <Link to={"/bag"} className="nav-link p-0 text-body-secondary">
+                <FaCartShopping /> Bag
+              </Link>
+            </li>
+
+            <li className="nav-item mb-2">
+              <Link to={"/orders"} className="nav-link p-0 text-body-secondary">
+                <BiSolidPurchaseTag /> Orders
+              </Link>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-body-secondary">
+                <MdGroups /> About Us
               </a>
-            </li>{" "}
-            <li class="ms-3">
-              <a class="link-body-emphasis" href="#" aria-label="Facebook">
-                <svg class="bi" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#facebook"></use>
-                </svg>
-              </a>
-            </li>{" "}
-          </ul>{" "}
-        </div>{" "}
-      </footer>
-    </>
+            </li>
+            <li className="nav-item mb-2">
+              <Link to={"/help"} className="nav-link p-0 text-body-secondary">
+                <MdOutlineSupportAgent /> Help & Support
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Column 2 */}
+        <div className="col mb-3">
+          <form onSubmit={handleSubmit}>
+            <h5>Drop Your Feedback Here : </h5>
+            <p>
+              We truly value your feedback and will review it closely. We’ll
+              work on improving any areas that need attention.{" "}
+            </p>
+            <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label htmlFor="newsletter1" className="visually-hidden">
+                Write Here ...
+              </label>
+              <input
+                id="newsletter1"
+                type="input"
+                className="form-control"
+                placeholder="Write Here ..."
+                value={feedback}
+                onChange={(e) => setFeedback(e.target.value)}
+              />
+              <button
+                className="btn btn-primary"
+                type="submit"
+                placeholder="Write your feedback..."
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2025 Company, Inc. All rights reserved.</p>
+        <ul className="list-unstyled d-flex">
+          <li className="ms-3">
+            <a className="link-body-emphasis" href="#" aria-label="Instagram">
+              <svg className="bi" width="24" height="24">
+                <use xlinkHref="#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li className="ms-3">
+            <a className="link-body-emphasis" href="#" aria-label="Facebook">
+              <svg className="bi" width="24" height="24" aria-hidden="true">
+                <use xlinkHref="#facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   );
 };
 export default Footer;
