@@ -11,7 +11,7 @@ const FetchData = () => {
     const controller = new AbortController();
     const signal = controller.signal;
     dispatch(fetchSliceActions.markfetchingstarted());
-    fetch("http://localhost:8085/products", { signal })
+    fetch("https://nike-backend-3-y15d.onrender.com/products", { signal })
       .then((res) => res.json())
       .then((data) => {
         dispatch(itemactions.addInitialItems(data));
