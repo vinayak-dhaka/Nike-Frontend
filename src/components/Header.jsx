@@ -10,7 +10,7 @@ const Header = () => {
   const bag = useSelector((store) => store.bag);
 
   return (
-    <header className="d-flex justify-content-center py-3 position-relative">
+    <header className=" container-fluid d-flex justify-content-center py-3 position-relative">
       <ul className="nav nav-pills position-relative">
         <li className="nav-item mx-2">
           <NavLink

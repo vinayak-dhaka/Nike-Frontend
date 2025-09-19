@@ -1,16 +1,22 @@
 import { useDispatch } from "react-redux";
 import { bagActions } from "../store/bagSlice";
+import { useNavigate } from "react-router-dom";
 
 const BagItemContainer = ({ item }) => {
   const dispatch = useDispatch();
 
-  const handleremovefromcart = () => {
+  const handleremovefromcart = (e) => {
+    e.stopPropagation();
     dispatch(bagActions.removeFromBag(item.id));
+  };
+  const navigate = useNavigate();
+  const handleImageClick = () => {
+    navigate(`/shoe/${item.id}`);
   };
 
   return (
     <>
-      <div class="bag-item-container">
+      <div class="bag-item-container" onClick={handleImageClick}>
         <div class="item-left-part">
           <img className="item-image" src={item.image} alt="item image" />
         </div>
@@ -23,12 +29,7 @@ const BagItemContainer = ({ item }) => {
           </div>
         </div>
 
-        <div
-          class="remove-from-cart"
-          onClick={() => {
-            handleremovefromcart();
-          }}
-        >
+        <div class="remove-from-cart" onClick={handleremovefromcart}>
           X
         </div>
       </div>

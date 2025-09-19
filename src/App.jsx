@@ -14,6 +14,7 @@ function App() {
   const fetchstatus = useSelector((store) => store.fetchstatus);
   return (
     <>
+      <ToastContainer />
       <Header />
       <FetchData />
       {fetchstatus.fetchingdone ? <Outlet /> : <LoadingSpinner />}

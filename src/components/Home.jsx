@@ -9,7 +9,14 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <div className="cards-container">
+      <div
+        className="container cards-container"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gap: "10rem",
+        }}
+      >
         {cards.map((card) => {
           return (
             <CardItem

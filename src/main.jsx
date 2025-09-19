@@ -14,11 +14,18 @@ import Help from "./components/Help.jsx";
 import Orders from "./components/Orders.jsx";
 import About from "./components/About.jsx";
 import OrderDetail from "./components/Orderdetail.jsx";
+import ShoePage from "./components/ShoePage.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <>
+        <ScrollToTop />
+        <App />
+      </>
+    ),
     children: [
       {
         path: "/",
@@ -29,6 +36,7 @@ const router = createBrowserRouter([
       { path: "/orders", element: <Orders /> },
       { path: "/about", element: <About /> },
       { path: "/view", element: <OrderDetail /> },
+      { path: "/shoe/:id", element: <ShoePage /> },
     ],
   },
 ]);

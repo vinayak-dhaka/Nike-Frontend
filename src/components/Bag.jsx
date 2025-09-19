@@ -12,7 +12,15 @@ const Bag = () => {
   return (
     <>
       <main>
-        <div className="bag-page " style={{ marginBottom: "200px" }}>
+        <div
+          className="bag-page "
+          style={{
+            marginBottom: "200px",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(500px, 1fr))",
+            gap: "10rem",
+          }}
+        >
           <div className="bag-items-container">
             {finalitem.length == 0 ? (
               <p

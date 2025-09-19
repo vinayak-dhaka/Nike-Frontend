@@ -1,6 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 const Orderdetailitem = ({ item }) => {
+  const navigate = useNavigate();
+  const handleImageClick = () => {
+    navigate(`/shoe/${item.id}`);
+  };
   return (
-    <div className="bag-item-container">
+    <div className="bag-item-container" onClick={handleImageClick}>
       <div className="item-left-part">
         <img className="item-image" src={item.image} alt={item.item_name} />
       </div>
