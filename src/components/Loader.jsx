@@ -32,7 +32,7 @@ const LoadingSpinner = () => {
         Request sent to backend for data call. Please wait while data is
         fetched. <br />
         <strong>NOTE:</strong> As the backend API is hosted on a free platform
-        called <em>Render</em>, it might take a few minutes. <br /> Minimum
+        called <em>Render</em>, it might take a few minutes. <br /> Maximum
         waiting time: <strong>4 minutes</strong>
       </p>
 
