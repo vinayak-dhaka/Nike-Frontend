@@ -16,6 +16,7 @@ function App() {
     <>
       <ToastContainer />
       <Header />
+
       <FetchData />
       {fetchstatus.fetchingdone ? <Outlet /> : <LoadingSpinner />}
 

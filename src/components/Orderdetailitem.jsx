@@ -7,8 +7,12 @@ const Orderdetailitem = ({ item }) => {
   };
   return (
     <div className="bag-item-container" onClick={handleImageClick}>
-      <div className="item-left-part">
-        <img className="item-image" src={item.image} alt={item.item_name} />
+      <div className="item-left-part fluid">
+        <img
+          className="item-image img-fluid"
+          src={item.image}
+          alt={item.item_name}
+        />
       </div>
       <div className="item-right-part">
         <div className="company">{item.company}</div>

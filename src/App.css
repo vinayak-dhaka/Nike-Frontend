@@ -264,14 +264,14 @@ a.action_container:link {
 }
 
 .bag-page {
-  width: 75%;
+  width: 95%;
   margin-left: 12.5%;
 }
 
 .bag-summary {
   vertical-align: top;
   display: inline-block;
-  width: 50%;
+  width: 65%;
   padding: 24px 0 0 16px;
   color: #282c3f;
   font-size: 13px;

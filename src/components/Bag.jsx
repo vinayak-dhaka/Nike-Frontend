@@ -13,15 +13,15 @@ const Bag = () => {
     <>
       <main>
         <div
-          className="bag-page "
+          className="bag-page container"
           style={{
             marginBottom: "200px",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(500px, 1fr))",
-            gap: "10rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "5rem",
           }}
         >
-          <div className="bag-items-container">
+          <div style={{ maxWidth: "100%" }}>
             {finalitem.length == 0 ? (
               <p
                 style={{
@@ -30,7 +30,7 @@ const Bag = () => {
                   fontWeight: "bold",
                   alignContent: "center",
                   alignItems: "center",
-                  marginLeft: "140px",
+                  marginLeft: "100px",
                   marginTop: "100px",
                 }}
               >
