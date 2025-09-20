@@ -43,8 +43,8 @@ const Hero = () => {
               >
                 <div
                   style={{
-                    width: "400px", // fixed width for all images
-                    height: "400px", // fixed height for all images
+                    width: "400px",
+                    height: "400px",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",

@@ -20,7 +20,6 @@ const Footer = () => {
   return (
     <footer className="py-5">
       <div className="row row-cols-1 row-cols-md-2">
-        {/* Column 1 */}
         <div className="col mb-3">
           <h5>Section</h5>
           <ul className="nav flex-column">
@@ -53,7 +52,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 2 */}
         <div className="col mb-3">
           <form onSubmit={handleSubmit}>
             <h5>Drop Your Feedback Here : </h5>
