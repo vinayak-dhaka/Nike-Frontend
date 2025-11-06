@@ -21,11 +21,7 @@ const LoadingSpinner = () => {
         <span className="visually-hidden">Loading...</span>
       </div>
 
-      <p className="text-center" style={{ maxWidth: "400px" }}>
-        Request sent to backend for data call. Please wait while data is
-        fetched. <br />
-     
-      </p>
+      
 
      
     </div>
