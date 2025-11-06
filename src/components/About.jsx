@@ -38,7 +38,7 @@ const About = () => {
               </button>
             </Link>
             <a
-              href="https://github.com/vinayak-dhaka"
+              href="https://vinayakdev.in"
               target="_blank"
               rel="noopener noreferrer"
             >
